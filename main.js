@@ -43,7 +43,8 @@ function init() {
 
   // Load Animation
   const loader = new GLTFLoader();
-  loader.load( 'public/hand_wave_02.glb', function ( gltf ) {
+	const modelPath = import.meta.env.PROD ? './hand_wave_02.glb' : './public/hand_wave_02.glb';
+  loader.load( modelPath, function ( gltf ) {
     asciiModel = gltf.scene;
     scene.add( asciiModel );
 

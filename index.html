@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Gautham V</title>
+    
+    <script type="module" defer src="/main.js"></script>
+    <script type="module" defer src="/effects.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  </head>
+  <body>
+
+    <!-- HERO SECTION -->
+    <div id="hero" class="m-8 mt-12 lg:mt-0 flex justify-center items-start flex-col lg:h-screen lg:ml-32 gap-4 lg:gap-4">
+      <h1 class="text-6xl font-bold lg:font-medium lg:text-7xl font-inter fade-up-in">Hey There!</h1>
+      <h2 class="text-3xl lg:text-4xl font-bold font-inter fade-up-in">I'm <span class="rainbow-glow-strong">Gautham</span>.</h2>
+      <p class="lg:w-1/2 lg:text-2xl mt-8 fade-up-in-250 font-inter">
+        I’m a incoming student at <a href="https://www.ubc.ca/" target="_blank">UBC</a> and an avid hobbyist programmer. 
+        Over the years, I’ve tinkered with <span class="inter bg-gradient-to-r from-blue-600 to-indigo-400 inline-block text-transparent bg-clip-text">websites</span>,
+        <span class="inter bg-gradient-to-r from-red-500 to-orange-400 inline-block text-transparent bg-clip-text">robotics</span>,
+        <span class="inter bg-gradient-to-r from-green-500 to-emerald-600 inline-block text-transparent bg-clip-text">deep learning</span>,
+        and have hosted and participated in various <a href="https://devpost.com/gauthamv6002" target="_blank">hackathons</a> to share my passion.
+        <br><br>
+        Outside of programming, I enjoy video games, an occasional badminton rally, and the odd youtube video.
+        <br><br>
+        <a href="#projects" id="projectsLink" class="hidden lg:text-2xl lg:flex w-fit items-center gap-2 group cursor-pointer">View some of my work 
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 mt-0 lg:w-6 lg:mt-[3px] group-hover:rotate-90 transition-all"> <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /> </svg>
+        </a>
+      </p>
+    </div>
+
+    <!-- CONTAINER FOR ASCII EFFECT -->
+    <div id="effectContainer">
+      
+    </div>
+
+    <!-- PROJECTS SECTION  -->
+    <div id="projects" class="m-8 lg:mt-48 lg:ml-32 lg:h-[80vh] flex flex-col gap-4">
+      <h2 id="projectsHeader" class="lg:mt-8 text-2xl lg:text-4xl md:font-bold"><span class="lg:hidden">|</span> Here's what I've been up to.</h2>    
+      <div id="cards" class="cards flex flex-col gap-4 lg:mt-4 lg:w-1/2">
+
+        <!-- Robotics -->
+        <div id="card" class="card hover:cursor-pointer flex items-center group card-color-blue relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
+          <div class="content">
+            <div class="flex gap-2 lg:group-hover:-translate-x-2 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 lg:w-7"><path d="M5.32943 3.27152C6.56252 2.83314 7.9923 3.10743 8.97927 4.0944C9.96652 5.08165 10.2407 6.51196 9.80178 7.74529L20.6465 18.5901L18.5252 20.7114L7.67936 9.86703C6.44627 10.3054 5.01649 10.0311 4.02952 9.04415C3.04227 8.0569 2.7681 6.62659 3.20701 5.39326L5.44373 7.62994C6.02952 8.21572 6.97927 8.21572 7.56505 7.62994C8.15084 7.04415 8.15084 6.0944 7.56505 5.50862L5.32943 3.27152ZM15.6968 5.15506L18.8788 3.38729L20.293 4.80151L18.5252 7.98349L16.7574 8.33704L14.6361 10.4584L13.2219 9.04415L15.3432 6.92283L15.6968 5.15506ZM8.62572 12.9332L10.747 15.0546L5.79729 20.0043C5.2115 20.5901 4.26175 20.5901 3.67597 20.0043C3.12464 19.453 3.09221 18.5792 3.57867 17.99L3.67597 17.883L8.62572 12.9332Z"></path></svg>
+              <h3 class="text-xl lg:text-2xl font-bold">VEX Robotics</h3>
+            </div>
+            
+            <p class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all">
+              I've spent three years on VEX Robotics Team 3388A. We've made it to <strong>World Championships</strong> two years in a row, 
+              and won several local and provincial-level awards during the 2023-24 season.
+            </p>
+          </div>
+          <div class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+            <svg onclick="window.open('https://www.robotevents.com/teams/V5RC/3388A')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path></svg>
+            <svg onclick="window.open('https://github.com/GauthamV6002/dreadnought/')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+          </div>
+        </div>
+
+        <!-- CTRL Hacks -->
+        <div id="card" class="card hover:cursor-pointer flex items-center group card-color-pink relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
+          <div class="content">
+            <div class="flex gap-3 lg:group-hover:-translate-x-2 transition-all">
+              <img src = "public/ctrl_hacks_logo.svg" alt="Bull Logo" class="w-4 lg:w-6"/>
+              <h3 class="text-xl lg:text-2xl font-bold">CTRL Hacks</h3>
+            </div>
+            
+            <p class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all">
+              Organized, fundraised for, and hosted a hackathon for highschool students. I designed the <strong>three.js-powered website</strong>, and handled some logistics.
+            </p>
+          </div>
+          <div class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+            <svg onclick="window.open('https://ctrl-hacks.github.io/')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path></svg>
+            <svg onclick="window.open('https://github.com/ctrl-hacks/ctrl-hacks.github.io')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+          </div>
+        </div>
+        
+        
+
+        <!-- Mecha Website -->
+        <div id="card" class="card hover:cursor-pointer flex items-center group card-color-red relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
+          <div class="content">
+            <div class="flex gap-1 lg:group-hover:-translate-x-2 transition-all">
+              <img src = "public/whitebull_nobg.svg" alt="Bull Logo" class="w-10 lg:w-12"/>
+              <h3 class="text-xl lg:text-2xl font-bold">Mecha Mayhem Website</h3>
+            </div>
+            
+            <p class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all">
+              Co-developer of the official website for Canada’s <strong>largest robotics tournament</strong>.
+              Made in one year, with plenty of improvements to come.
+            </p>
+          </div>
+          <div class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+            <svg onclick="window.open('https://mechamayhem.ca/')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path></svg>
+            <svg onclick="window.open('https://github.com/liuisaac/Mecha_Mayhem_App/')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+          </div>
+        </div>
+
+
+        <!-- SeedPod -->
+        <div id="card" class="card hover:cursor-pointer flex items-center group card-color-green relative border-gray-400 border-[0.5px] lg:mb-16 lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
+          <div class="content">
+            <div class="flex gap-2 lg:group-hover:-translate-x-2 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 lg:w-7"><path d="M20.998 3V5C20.998 14.6274 15.6255 19 8.99805 19L7.0964 18.9999C7.3079 15.9876 8.24541 14.1648 10.6939 11.9989C11.8979 10.9338 11.7965 10.3189 11.2029 10.6721C7.1193 13.1016 5.09114 16.3862 5.00119 21.6302L4.99805 22H2.99805C2.99805 20.6373 3.11376 19.3997 3.34381 18.2682C3.1133 16.9741 2.99805 15.2176 2.99805 13C2.99805 7.47715 7.4752 3 12.998 3C14.998 3 16.998 4 20.998 3Z"></path></svg>
+              <h3 class="text-xl lg:text-2xl font-bold">SeedPod</h3>
+            </div>
+            
+            <p class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all">
+              A self-sufficent plant-pod made with an Arduino and ESP32, with a gamified frontend using React and OpenCV. 
+              Won <strong>1st Place</strong> at <a href="https://hack-the-change-2023-19434.devpost.com/" target="_blank">Hack the Change YYC</a>, a university-level hackathon with 300+ participants.
+            </p>
+          </div>
+          <div class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+            <svg onclick="window.open('https://devpost.com/software/seedpod-empowering-individual-agriculture')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path></svg>
+            <svg onclick="window.open('https://github.com/ericli3690/hack-the-change/')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+          </div>
+        </div>
+
+        
+      </div>
+
+    </div>
+
+
+  </body>
+</html>

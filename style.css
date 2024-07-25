@@ -206,9 +206,10 @@ a:hover:after {
   );
 }
 
+
 .card-color-pink::before {
   background: radial-gradient(
-    400px circle at 200px 120px, 
+    400px circle at 100px 120px, 
     rgba(187, 36, 195, 0.5),
     transparent 40%
   );
@@ -220,23 +221,4 @@ a:hover:after {
     rgba(0, 255, 30, 0.4),
     transparent 40%
   );
-}
-
-@media screen and (min-width: 1024px) {
-  .card-color-pink::before {
-    background: radial-gradient(
-      400px circle at 600px 120px, 
-      rgba(187, 36, 195, 0.5),
-      transparent 40%
-    );
-  }
-
-  .card-color-green::before {
-    background: radial-gradient(
-      400px circle at 500px 120px, 
-      rgba(0, 255, 30, 0.4),
-      transparent 40%
-    );
-  }
-
 }

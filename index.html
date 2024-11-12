@@ -11,6 +11,8 @@
     <script type="module" defer src="/effects.js"></script>
     <link rel="stylesheet" href="style.css">
 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   </head>
@@ -25,9 +27,9 @@
         Over the years, I’ve tinkered with <span class="inter bg-gradient-to-r from-blue-600 to-indigo-400 inline-block text-transparent bg-clip-text">websites</span>,
         <span class="inter bg-gradient-to-r from-red-500 to-orange-400 inline-block text-transparent bg-clip-text">robotics</span>,
         <span class="inter bg-gradient-to-r from-green-500 to-emerald-600 inline-block text-transparent bg-clip-text">deep learning</span>,
-        and have hosted and participated in various <a href="https://devpost.com/gauthamv6002" target="_blank">hackathons</a> to share my passion.
+        and love doing anything technology-related to share my passion.
         <br><br>
-        Outside of programming, I enjoy video games, an occasional badminton rally, and the odd youtube video.
+        Outside of tech, I enjoy video games, a casual badminton rally, and the occasional youtube video.
         <br><br>
         <a href="#projects" id="projectsLink" class="hidden lg:text-2xl lg:flex w-fit items-center gap-2 group cursor-pointer">View some of my work 
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 mt-0 lg:w-6 lg:mt-[3px] group-hover:rotate-90 transition-all"> <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /> </svg>
@@ -44,6 +46,44 @@
     <div id="projects" class="m-8 lg:mt-48 lg:h-fit lg:ml-32 flex flex-col gap-4">
       <h2 id="projectsHeader" class="lg:mt-8 text-2xl lg:text-4xl md:font-bold"><span class="lg:hidden">|</span> Here's what I've been up to.</h2>    
       <div id="cards" class="cards flex flex-col gap-4 lg:mt-4 lg:w-1/2">
+
+        <!-- LifeLink -->
+        <div id="card" class="card hover:cursor-pointer flex items-center group card-color-green relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
+          <div class="content">
+            <div class="flex gap-2 items-center lg:group-hover:-translate-x-2 transition-all">
+              <svg class="w-6 lg:w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3C19.5376 3 22 5.5 22 9C22 16 14.5 20 12 21.5C10.0226 20.3135 4.91699 17.563 2.86894 13.001L1 13V11L2.21045 11.0009C2.07425 10.3633 2 9.69651 2 9C2 5.5 4.5 3 7.5 3C9.35997 3 11 4 12 5C13 4 14.64 3 16.5 3ZM16.5 5C15.4241 5 14.2593 5.56911 13.4142 6.41421L12 7.82843L10.5858 6.41421C9.74068 5.56911 8.5759 5 7.5 5C5.55906 5 4 6.6565 4 9C4 9.68542 4.09035 10.3516 4.26658 11.0004L6.43381 11L8.5 7.55635L11.5 12.5563L12.4338 11H17V13H13.5662L11.5 16.4437L8.5 11.4437L7.56619 13L5.10789 13.0006C5.89727 14.3737 7.09304 15.6681 8.64514 16.9029C9.39001 17.4955 10.1845 18.0485 11.0661 18.6038C11.3646 18.7919 11.6611 18.9729 12 19.1752C12.3389 18.9729 12.6354 18.7919 12.9339 18.6038C13.8155 18.0485 14.61 17.4955 15.3549 16.9029C18.3337 14.533 20 11.9435 20 9C20 6.64076 18.463 5 16.5 5Z"></path></svg>
+              <h3 class="text-xl lg:text-2xl font-bold">LifeLink</h3>
+            </div>
+            
+            <p class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all">
+              An inexpensive solution to bring a first-responder network to developing nations for medical emergencies. Powered by an ESP32, Flask, Langchain/Synthia-7B & React Native.
+              <strong>Won 1st Place</strong> at <a href="https://devpost.com/software/lifelink-24fd3g" target="_blank">Medihacks 2024.</a>
+            </p>
+          </div>
+          <div class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+            <svg onclick="window.open('https://devpost.com/software/lifelink-24fd3g')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path></svg>
+            <svg onclick="window.open('https://github.com/ericli3690/lifelink')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+          </div>
+        </div>
+
+        <!-- Mecha Website -->
+        <div id="card" class="card hover:cursor-pointer flex items-center group card-color-red relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
+          <div class="content">
+            <div class="flex gap-1 lg:group-hover:-translate-x-2 transition-all">
+              <img src = "public/whitebull_nobg.svg" alt="Bull Logo" class="w-10 lg:w-12"/>
+              <h3 class="text-xl lg:text-2xl font-bold">Mecha Mayhem Website</h3>
+            </div>
+            
+            <p class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all">
+              Co-developer of the official website for Canada’s <strong>largest robotics tournament</strong>.
+              Now helping lead a team of developers to make it even better.
+            </p>
+          </div>
+          <div class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+            <svg onclick="window.open('https://mechamayhem.ca/')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path></svg>
+            <svg onclick="window.open('https://github.com/westmech/Mecha-Mayhem-Frontend-2025')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+          </div>
+        </div>
 
         <!-- Robotics -->
         <div id="card" class="card hover:cursor-pointer flex items-center group card-color-blue relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
@@ -64,8 +104,9 @@
           </div>
         </div>
 
+
         <!-- CTRL Hacks -->
-        <div id="card" class="card hover:cursor-pointer flex items-center group card-color-pink relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
+        <div id="card" class="card hover:cursor-pointer flex items-center group card-color-pink relative border-gray-400 border-[0.5px] lg:mb-16 lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
           <div class="content">
             <div class="flex gap-3 lg:group-hover:-translate-x-2 transition-all">
               <img src = "public/ctrl_hacks_logo.svg" alt="Bull Logo" class="w-4 lg:w-6"/>
@@ -73,7 +114,7 @@
             </div>
             
             <p class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all">
-              Organized, fundraised for, and hosted a hackathon for highschool students. I designed the <strong>three.js-powered website</strong>, and handled some logistics.
+              <strong>Co-founded</strong> an independent hackathon for highschool students. I designed the <strong>three.js-powered website</strong>, and helped deal with with organizational logistics, fundraising, and outreach.
             </p>
           </div>
           <div class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
@@ -81,48 +122,6 @@
             <svg onclick="window.open('https://github.com/ctrl-hacks/ctrl-hacks.github.io')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
           </div>
         </div>
-        
-        
-
-        <!-- Mecha Website -->
-        <div id="card" class="card hover:cursor-pointer flex items-center group card-color-red relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
-          <div class="content">
-            <div class="flex gap-1 lg:group-hover:-translate-x-2 transition-all">
-              <img src = "public/whitebull_nobg.svg" alt="Bull Logo" class="w-10 lg:w-12"/>
-              <h3 class="text-xl lg:text-2xl font-bold">Mecha Mayhem Website</h3>
-            </div>
-            
-            <p class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all">
-              Co-developer of the official website for Canada’s <strong>largest robotics tournament</strong>.
-              Made in one year, with plenty of improvements to come.
-            </p>
-          </div>
-          <div class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
-            <svg onclick="window.open('https://mechamayhem.ca/')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path></svg>
-            <svg onclick="window.open('https://github.com/liuisaac/Mecha_Mayhem_App/')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
-          </div>
-        </div>
-
-
-        <!-- SeedPod -->
-        <div id="card" class="card hover:cursor-pointer flex items-center group card-color-green relative border-gray-400 border-[0.5px] lg:mb-16 lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all">
-          <div class="content">
-            <div class="flex gap-2 lg:group-hover:-translate-x-2 transition-all">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 lg:w-7"><path d="M20.998 3V5C20.998 14.6274 15.6255 19 8.99805 19L7.0964 18.9999C7.3079 15.9876 8.24541 14.1648 10.6939 11.9989C11.8979 10.9338 11.7965 10.3189 11.2029 10.6721C7.1193 13.1016 5.09114 16.3862 5.00119 21.6302L4.99805 22H2.99805C2.99805 20.6373 3.11376 19.3997 3.34381 18.2682C3.1133 16.9741 2.99805 15.2176 2.99805 13C2.99805 7.47715 7.4752 3 12.998 3C14.998 3 16.998 4 20.998 3Z"></path></svg>
-              <h3 class="text-xl lg:text-2xl font-bold">SeedPod</h3>
-            </div>
-            
-            <p class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all">
-              A self-sufficent plant-pod made with an Arduino and ESP32, with a gamified frontend using React and OpenCV. 
-              Won <strong>1st Place</strong> at <a href="https://hack-the-change-2023-19434.devpost.com/" target="_blank">Hack the Change YYC</a>, a university-level hackathon with 300+ participants.
-            </p>
-          </div>
-          <div class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
-            <svg onclick="window.open('https://devpost.com/software/seedpod-empowering-individual-agriculture')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path></svg>
-            <svg onclick="window.open('https://github.com/ericli3690/hack-the-change/')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
-          </div>
-        </div>
-
         
       </div>
 
@@ -192,8 +191,10 @@
           <div class="content flex justify-start items-center w-[1/2] lg:h-full gap-2">
             <img class="w-[90%] rounded-md" src="public/resume.png" alt="Resume Image">
             <div class="actions w-full lg:h-full flex flex-col items-center justify-start gap-6">
-              <a target="_blank" href="https://drive.google.com/file/d/17Kl5e7wD7gf6ICPU0o_PWm59-01YBPck/view?usp=sharing"><svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path></svg></a>
-              <a href="public/resume.pdf" download="resume.pdf"><svg onclick="" class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13 12H16L12 16L8 12H11V8H13V12ZM15 4H5V20H19V8H15V4ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H16L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918Z"></path></svg></a>
+              <a target="_blank" href="https://drive.google.com/file/d/1CszbUYZpdlG3lh9MjgZxRJa_SJMEenfY/view?usp=sharing"><svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path></svg></a>
+              
+              <!-- Won't work in dev env cuz path is inside public folder (img is in root directory in prod) -->
+              <a href="resume.pdf" download="resume.pdf"><svg onclick="" class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13 12H16L12 16L8 12H11V8H13V12ZM15 4H5V20H19V8H15V4ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H16L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918Z"></path></svg></a>
             </div>
           </div>
         </div>

@@ -51,7 +51,7 @@ for(const project of projectArchiveData) {
                 ${iconSVG}
                     
                 <div class="flex flex-col">
-                    <a href="${projectLink}" target="_blank" class="text-lg w-fit">${projectTitle}</a>
+                    <a href="${projectLink ? projectLink : projectGithub}" target="_blank" class="text-lg w-fit">${projectTitle}</a>
                     <p class="text-white/70 lg:block hidden text-sm">${projectDescription}</p>
                 </div>
             </div>

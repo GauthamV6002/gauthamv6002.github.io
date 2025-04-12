@@ -3,9 +3,16 @@ const projectArchiveData = [
     {
         projectTitle: "CTRL Hacks",
         projectDescription: "Co-founded an independent hackathon for highschool students. I designed the three.js-powered website, and helped deal with with organizational logistics, fundraising, and outreach.",
-        iconSVG: '<img class="lg:size-8 size-5" src="public/biztech.svg" alt="BizTech Logo" class="w-4 lg:w-6"/>',
+        iconSVG: '<img class="lg:size-8 size-5" src="public/ctrl_hacks_logo.svg" alt="CTRL Hacks Logo" />',
         projectLink: "https://ctrl-hacks.github.io/",
         projectGithub: "https://github.com/ctrl-hacks/ctrl-hacks.github.io"
+    },
+    {
+        projectTitle: "Mecha Mayhem Website",
+        projectDescription: "Co-developer of the official website for Canada’s largest robotics tournament. Now helping lead a team of developers to make it even better.",
+        iconSVG: '<img class="lg:size-8 size-5" src="public/whitebull_nobg.svg" alt="Mecha Mayhem Logo" />',
+        projectLink: "https://www.mechamayhem.ca/",
+        projectGithub: "https://github.com/westmech/Mecha-Mayhem-Frontend-2025"
     },
     {
         projectTitle: "SeedPod",

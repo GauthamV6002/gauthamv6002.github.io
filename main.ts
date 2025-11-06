@@ -3,17 +3,28 @@ import * as THREE from "three";
 import { AsciiEffect } from "three/addons/effects/AsciiEffect.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
-let camera, controls, scene, renderer, effect;
-let asciiModel, mixer;
+let camera: THREE.PerspectiveCamera;
+let scene: THREE.Scene;
+let renderer: THREE.WebGLRenderer;
+let effect: AsciiEffect;
+let asciiModel: THREE.Object3D;
+let mixer: THREE.AnimationMixer;
 
 let asciiModelRotation = -0.2;
 let isMobileDevice = false;
 
 // Mouse Tracker
-const mapRange = (value, fromMin, fromMax, toMin, toMax) =>
+const mapRange = (
+  value: number,
+  fromMin: number,
+  fromMax: number,
+  toMin: number,
+  toMax: number
+): number =>
   ((value - fromMin) * (toMax - toMin)) / (fromMax - fromMin) + toMin;
+
 setTimeout(() => {
-  document.addEventListener("mousemove", (e) => {
+  document.addEventListener("mousemove", (e: MouseEvent) => {
     const windowWidthHalf = window.innerWidth / 2;
     const x = e.clientX - windowWidthHalf;
 
@@ -24,7 +35,7 @@ setTimeout(() => {
   });
 }, 1500);
 
-function init() {
+function init(): void {
   camera = new THREE.PerspectiveCamera(
     70,
     window.innerWidth / window.innerHeight,
@@ -79,12 +90,16 @@ function init() {
       // Start Animation
       mixer = new THREE.AnimationMixer(asciiModel);
       const waveClip = THREE.AnimationClip.findByName(gltf.animations, "wave");
-      const waveAnim = mixer.clipAction(waveClip);
-      waveAnim.play();
+      if (waveClip) {
+        const waveAnim = mixer.clipAction(waveClip);
+        waveAnim.play();
+      }
 
       // const torusClip = THREE.AnimationClip.findByName(gltf.animations, "TorusAction");
-      // const torusAnim = mixer.clipAction(torusClip);
-      // torusAnim.play();
+      // if (torusClip) {
+      //   const torusAnim = mixer.clipAction(torusClip);
+      //   torusAnim.play();
+      // }
     },
     undefined,
     (error) => console.error(error)
@@ -100,11 +115,14 @@ function init() {
 
   // Special case: append effect.domElement, instead of renderer.domElement.
   // AsciiEffect creates a custom domElement (a div container) where the ASCII elements are placed.
-  document.getElementById("effectContainer").appendChild(effect.domElement);
+  const effectContainer = document.getElementById("effectContainer");
+  if (effectContainer) {
+    effectContainer.appendChild(effect.domElement);
+  }
   window.addEventListener("resize", onWindowResize);
 }
 
-function onWindowResize() {
+function onWindowResize(): void {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
@@ -114,7 +132,7 @@ function onWindowResize() {
 
 const clock = new THREE.Clock();
 
-function animate() {
+function animate(): void {
   if (mixer) mixer.update(clock.getDelta() * 0.8);
   if (asciiModel) asciiModel.rotation.y = asciiModelRotation;
 

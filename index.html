@@ -6,7 +6,7 @@
 
     <title>Gautham V</title>
 
-    <script type="module" defer src="/main.js"></script>
+    <script type="module" defer src="/main.ts"></script>
     <link rel="stylesheet" href="style.css" />
 
     <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
@@ -28,38 +28,52 @@
       id="hero"
       class="m-8 mt-12 lg:mt-0 flex justify-center items-start flex-col lg:h-screen lg:ml-32 gap-4 lg:gap-4"
     >
+      <!-- HEADER -->
       <h1
         class="text-6xl font-bold lg:font-medium lg:text-7xl font-inter fade-up-in"
       >
         Hey There!
       </h1>
+
+      <!-- SUBHEADER -->
       <h2 class="text-3xl lg:text-4xl font-bold font-inter fade-up-in">
         I'm <span class="rainbow-glow-strong">Gautham</span>.
       </h2>
+
+      <!-- HERO -->
       <p class="lg:w-1/2 lg:text-2xl mt-8 fade-up-in-250 font-inter">
         I'm a founding engineer at
-        <a href="https://www.toma.com/" target="_blank">Toma (YC W24)</a>. Over
-        the years, I’ve messed with
+        <a href="https://www.toma.com/" target="_blank">Toma (YC W24)</a>. I
+        dropped out of
+        <a href="https://www.ubc.ca/" target="_blank">UBC</a>
+        after my first year, and I'm now working on getting an
         <span
           class="bg-gradient-to-r from-blue-600 to-indigo-400 inline-block text-transparent bg-clip-text"
-          >fullstack dev</span
-        >,
-        <span
-          class="bg-gradient-to-r from-red-500 to-orange-400 inline-block text-transparent bg-clip-text"
-          >robotics</span
-        >,
+          >O-1 visa</span
+        >, to move to
         <span
           class="bg-gradient-to-r from-green-500 to-emerald-600 inline-block text-transparent bg-clip-text"
-          >deep learning</span
-        >, and love any kind of technical-tinkering. <br /><br />
-        Outside of tech, I enjoy a casual badminton rally, and am trying to get
-        better at super smash bros & cooking.
+          >San Francisco</span
+        >
+        full-time to build something that'll
+        <span
+          class="bg-gradient-to-r from-red-500 to-orange-400 inline-block text-transparent bg-clip-text"
+          >change the world.</span
+        >
+
         <br /><br />
+
+        But when I'm not doing that, I'm always down for a badminton rally or a
+        game of smash.
+
+        <br /><br />
+
         <a
           href="#projects"
           id="projectsLink"
           class="hidden lg:text-2xl lg:flex w-fit items-center gap-2 group cursor-pointer"
-          >View some of my work
+        >
+          Here's what makes me different.
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -87,50 +101,111 @@
       class="m-8 lg:mt-48 lg:h-fit lg:ml-32 flex flex-col gap-4"
     >
       <h2 id="projectsHeader" class="lg:mt-8 text-2xl lg:text-4xl md:font-bold">
-        <span class="lg:hidden">|</span> Here's what I've been up to.
+        <span class="lg:hidden">|</span> A one-pager on me.
       </h2>
       <div id="cards" class="cards flex flex-col gap-4 lg:mt-4 lg:w-1/2">
-        <!-- LifeLink -->
+        <!-- Toma -->
         <div
           id="card"
           class="card hover:cursor-pointer flex items-center group card-color-green relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all"
         >
           <div class="content">
             <div
-              class="flex gap-2 items-center lg:group-hover:-translate-x-2 transition-all"
+              class="flex gap-3 items-center lg:group-hover:-translate-x-2 transition-all"
             >
-              <svg
-                class="w-6 lg:w-8"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M16.5 3C19.5376 3 22 5.5 22 9C22 16 14.5 20 12 21.5C10.0226 20.3135 4.91699 17.563 2.86894 13.001L1 13V11L2.21045 11.0009C2.07425 10.3633 2 9.69651 2 9C2 5.5 4.5 3 7.5 3C9.35997 3 11 4 12 5C13 4 14.64 3 16.5 3ZM16.5 5C15.4241 5 14.2593 5.56911 13.4142 6.41421L12 7.82843L10.5858 6.41421C9.74068 5.56911 8.5759 5 7.5 5C5.55906 5 4 6.6565 4 9C4 9.68542 4.09035 10.3516 4.26658 11.0004L6.43381 11L8.5 7.55635L11.5 12.5563L12.4338 11H17V13H13.5662L11.5 16.4437L8.5 11.4437L7.56619 13L5.10789 13.0006C5.89727 14.3737 7.09304 15.6681 8.64514 16.9029C9.39001 17.4955 10.1845 18.0485 11.0661 18.6038C11.3646 18.7919 11.6611 18.9729 12 19.1752C12.3389 18.9729 12.6354 18.7919 12.9339 18.6038C13.8155 18.0485 14.61 17.4955 15.3549 16.9029C18.3337 14.533 20 11.9435 20 9C20 6.64076 18.463 5 16.5 5Z"
-                ></path>
-              </svg>
-              <h3 class="text-xl lg:text-2xl font-bold">LifeLink</h3>
+              <img src="public/toma.svg" alt="Toma Logo" class="w-2 lg:w-3" />
+              <h3 class="text-xl lg:text-2xl font-bold">Founding Eng @ Toma</h3>
             </div>
 
             <p
               class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all"
             >
-              An inexpensive solution to bring a first-responder network to
-              developing nations for medical emergencies. Powered by an ESP32,
-              Flask, Langchain/Synthia-7B & React Native.
-              <strong>Won 1st Place</strong> at
+              Backed by YC (W24) and a16z (17M Series A). Second engineer to
+              join, and got featured in
               <a
-                href="https://devpost.com/software/lifelink-24fd3g"
+                href="https://www.laweekly.com/how-gautham-venkateshwaran-is-building-the-future-of-the-ai-workforce-for-niche-and-underserved-industries/"
                 target="_blank"
-                >Medihacks 2024.</a
+                >LA Weekly</a
+              >,
+              <a
+                href="https://www.ibtimes.com/how-ai-voice-agents-are-quietly-taking-over-hollywood-other-industries-3789569"
+                target="_blank"
+                >IB Times</a
+              >, and
+              <a
+                href="https://nextplayso.substack.com/p/why-andreessen-horowitz-is-betting"
+                target="_blank"
+                >Next Play</a
               >
+              for my work.
             </p>
           </div>
           <div
             class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
           >
             <svg
-              onclick="window.open('https://devpost.com/software/lifelink-24fd3g')"
+              onclick="window.open('https://www.toma.com/')"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="lg:w-8 cursor-pointer hover:scale-125 transition-all"
+            >
+              <path
+                d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Competition Wins -->
+        <div
+          id="card"
+          class="card hover:cursor-pointer flex items-center group card-color-red relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all"
+        >
+          <div class="content">
+            <div
+              class="flex gap-1 lg:group-hover:-translate-x-2 transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 lg:w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
+                />
+              </svg>
+
+              <h3 class="text-xl lg:text-2xl font-bold">Competition Wins</h3>
+            </div>
+
+            <p
+              class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all"
+            >
+              Won $8k in hackathons, including two
+              <a
+                href="https://devpost.com/software/lifelink-24fd3g"
+                target="_blank"
+                >first-place wins</a
+              >
+              at university-level hackathons, while still in high school. Won
+              $2k through entrepreneurship competitions, and was youngest-ever
+              and only solo finalist at the
+              <a href="https://www.innovationboard.ca/" target="_blank"
+                >IOB UBC Pitch Competition 2025</a
+              >.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+          >
+            <svg
+              onclick="window.open('https://devpost.com/gauthamv6002')"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -141,7 +216,7 @@
               ></path>
             </svg>
             <svg
-              onclick="window.open('https://github.com/ericli3690/lifelink')"
+              onclick="window.open('https://github.com/ericli3690/hack-the-change')"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -151,52 +226,6 @@
                 d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"
               ></path>
             </svg>
-          </div>
-        </div>
-
-        <!-- BizTech -->
-        <div
-          id="card"
-          class="card hover:cursor-pointer flex items-center group card-color-blue relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all"
-        >
-          <div class="content">
-            <div
-              class="flex gap-2 lg:group-hover:-translate-x-2 transition-all"
-            >
-              <img
-                src="public/biztech.svg"
-                alt="BizTech Logo"
-                class="w-4 lg:w-6"
-              />
-              <h3 class="text-xl lg:text-2xl font-bold">UBC BizTech</h3>
-            </div>
-
-            <p
-              class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all"
-            >
-              Running events at
-              <a href="https://www.ubcbiztech.com/" target="_blank"
-                >UBC BizTech</a
-              >, UBC's largest technology club. Spearheaded workshops for
-              <strong>250+ attendees</strong>, and worked with companies like
-              Amazon and Google to curate the best events on campus.
-            </p>
-          </div>
-          <div
-            class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
-          >
-            <svg
-              onclick="window.open('https://www.ubcbiztech.com/')"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="lg:w-8 cursor-pointer hover:scale-125 transition-all"
-            >
-              <path
-                d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"
-              ></path>
-            </svg>
-            <!--          <svg onclick="window.open('')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg> -->
           </div>
         </div>
 
@@ -225,10 +254,10 @@
             <p
               class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all"
             >
-              Spent three years on VEX Robotics Team 3388A. Made it to
-              <strong>World Championships</strong> two years in a row, and won
-              several local and provincial-level awards during the 2023-24
-              season.
+              Part of VEX Robotics Team 3388A in High School. Made it to
+              <strong>World Championships</strong> two years in a row, won
+              dozens of local awards, and won excellence (awarded to the top
+              team in the province) in 2024.
             </p>
           </div>
           <div
@@ -259,38 +288,43 @@
           </div>
         </div>
 
-        <!-- Mecha Website -->
+        <!-- KickStart 2025 -->
         <div
           id="card"
-          class="card hover:cursor-pointer flex items-center group card-color-red relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all"
+          class="card hover:cursor-pointer flex items-center group card-color-blue relative border-gray-400 border-[0.5px] lg:w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all"
         >
           <div class="content">
             <div
-              class="flex gap-1 lg:group-hover:-translate-x-2 transition-all"
+              class="flex gap-2 lg:group-hover:-translate-x-2 transition-all"
             >
               <img
-                src="public/whitebull_nobg.svg"
-                alt="Bull Logo"
-                class="w-10 lg:w-12"
+                src="public/biztech.svg"
+                alt="BizTech Logo"
+                class="w-4 lg:w-6"
               />
               <h3 class="text-xl lg:text-2xl font-bold">
-                Mecha Mayhem Website
+                Leadership & Event Organization
               </h3>
             </div>
 
             <p
               class="lg:text-lg mt-3 lg:group-hover:-translate-x-2 transition-all"
             >
-              Co-developer of the official website for Canada’s
-              <strong>largest robotics tournament</strong>. Now helping lead a
-              team of developers to make it even better.
+              Ran several events through High School and university. Led teams
+              of 45+ people, with events with 250+ attendees. Favorites are
+              <a href="https://ctrl-hacks.github.io/" target="_blank">
+                CTRL Hacks </a
+              >, and KickStart by
+              <a href="https://www.ubcbiztech.com/" target="_blank"
+                >UBC BizTech</a
+              >. Love to inspire people to give whatever they're doing 110%.
             </p>
           </div>
           <div
             class="flex flex-col gap-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
           >
             <svg
-              onclick="window.open('https://mechamayhem.ca/')"
+              onclick="window.open('https://www.ubcbiztech.com/')"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -300,20 +334,9 @@
                 d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"
               ></path>
             </svg>
-            <svg
-              onclick="window.open('https://github.com/westmech/Mecha-Mayhem-Frontend-2025')"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="lg:w-8 cursor-pointer hover:scale-125 transition-all"
-            >
-              <path
-                d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"
-              ></path>
-            </svg>
+            <!--          <svg onclick="window.open('')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="lg:w-8 cursor-pointer hover:scale-125 transition-all"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg> -->
           </div>
         </div>
-
         <!-- Projects Archive Link -->
         <div class="lg:mb-16 flex justify-start">
           <a
@@ -321,7 +344,7 @@
             id="projectsLink"
             class="hidden lg:text-xl lg:flex w-fit items-center gap-2 group cursor-pointer"
           >
-            View All
+            See More
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -341,9 +364,12 @@
       </div>
     </div>
 
-    <div id="contact" class="m-8 lg:mt-48 lg:ml-32 flex flex-col mt-24 gap-4">
+    <div
+      id="contact"
+      class="m-8 lg:mt-48 lg:mb-32 lg:ml-32 flex flex-col mt-24 gap-4"
+    >
       <h2 id="contactHeader" class="lg:mt-8 text-2xl lg:text-4xl md:font-bold">
-        <span class="lg:hidden">|</span> Interested? Let's get in touch!
+        <span class="lg:hidden">|</span> Intruiged? hmu.
       </h2>
 
       <div id="cards" class="cards flex flex-col gap-4 lg:mt-4 lg:w-1/2">
@@ -376,28 +402,29 @@
             </div>
           </div>
 
-          <!-- PHONE -->
+          <!-- X -->
           <div
             id="card"
             class="card hover:cursor-pointer flex items-center group card-color-blue relative border-gray-400 border-[0.5px] lg:w-[1/2] w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all"
+            onclick="window.open('https:\/\/x.com/gautham_city_')"
           >
             <div
               class="content flex lg:justify-center justify-start items-center w-full gap-2"
             >
               <svg
-                class="w-8 h-8 p-0 m-0 lg:translate-x-[80px] lg:group-hover:translate-x-0 lg:transition-all"
+                class="w-8 h-8 p-0 m-0 lg:translate-x-[67px] lg:group-hover:translate-x-0 lg:transition-all"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
                 <path
-                  d="M9.36556 10.6821C10.302 12.3288 11.6712 13.698 13.3179 14.6344L14.2024 13.3961C14.4965 12.9845 15.0516 12.8573 15.4956 13.0998C16.9024 13.8683 18.4571 14.3353 20.0789 14.4637C20.599 14.5049 21 14.9389 21 15.4606V19.9234C21 20.4361 20.6122 20.8657 20.1022 20.9181C19.5723 20.9726 19.0377 21 18.5 21C9.93959 21 3 14.0604 3 5.5C3 4.96227 3.02742 4.42771 3.08189 3.89776C3.1343 3.38775 3.56394 3 4.07665 3H8.53942C9.0611 3 9.49513 3.40104 9.5363 3.92109C9.66467 5.54288 10.1317 7.09764 10.9002 8.50444C11.1427 8.9484 11.0155 9.50354 10.6039 9.79757L9.36556 10.6821ZM6.84425 10.0252L8.7442 8.66809C8.20547 7.50514 7.83628 6.27183 7.64727 5H5.00907C5.00303 5.16632 5 5.333 5 5.5C5 12.9558 11.0442 19 18.5 19C18.667 19 18.8337 18.997 19 18.9909V16.3527C17.7282 16.1637 16.4949 15.7945 15.3319 15.2558L13.9748 17.1558C13.4258 16.9425 12.8956 16.6915 12.3874 16.4061L12.3293 16.373C10.3697 15.2587 8.74134 13.6303 7.627 11.6707L7.59394 11.6126C7.30849 11.1044 7.05754 10.5742 6.84425 10.0252Z"
+                  d="M10.4883 14.651L15.25 21H22.25L14.3917 10.5223L20.9308 3H18.2808L13.1643 8.88578L8.75 3H1.75L9.26086 13.0145L2.31915 21H4.96917L10.4883 14.651ZM16.25 19L5.75 5H7.75L18.25 19H16.25Z"
                 ></path>
               </svg>
               <p
                 class="lg:font-bold font-normal lg:text-[0.95rem] lg:opacity-0 group-hover:opacity-100 transition-all"
               >
-                +1 (825)-431-5488
+                gautham_city_
               </p>
             </div>
           </div>
@@ -407,7 +434,7 @@
         <div class="socials-contact-cards flex lg:flex-row flex-col gap-4">
           <!-- Github -->
           <div
-            onclick="window.open('https://github.com/GauthamV6002')"
+            onclick="window.open('https:\/\/github.com/GauthamV6002')"
             id="card"
             class="card hover:cursor-pointer flex items-center group card-color-green relative border-gray-400 border-[0.5px] lg:w-[1/2] w-full rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-10 transition-all"
           >
@@ -456,76 +483,6 @@
               >
                 Gautham Venkateshwaran
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h3 class="lg:mt-8 lg:text-2xl lg:font-bold hidden lg:block">
-        Looking for a Resume?
-      </h3>
-
-      <h3
-        onclick="window.open('https://drive.google.com/drive/folders/1P_gtvwNbCyHSOgQdM9_bl__bsklbkSsI?usp=drive_link')"
-        class="lg:hidden w-full font-bold mt-4 flex gap-1 flex-row justify-center items-center"
-      >
-        Or just download my resume!
-        <svg
-          class="w-6 h-6"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path
-            d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"
-          ></path>
-        </svg>
-      </h3>
-
-      <!-- Resume -->
-      <div class="lg:w-1/2 lg:block hidden w-full">
-        <div
-          id="card"
-          class="card lg:w-full overflow-scroll hover:cursor-pointer flex items-center group relative border-gray-400 border-[0.5px] rounded-md p-4 lg:p-6 lg:pl-8 lg:pr-4 transition-all"
-        >
-          <div
-            class="content flex justify-start items-center w-[1/2] lg:h-full gap-2"
-          >
-            <img
-              class="w-[90%] rounded-md"
-              src="public/resume.png"
-              alt="Resume Image"
-            />
-            <div
-              class="actions w-full lg:h-full flex flex-col items-center justify-start gap-6"
-            >
-              <a
-                target="_blank"
-                href="https://drive.google.com/drive/folders/1P_gtvwNbCyHSOgQdM9_bl__bsklbkSsI?usp=drive_link"
-                ><svg
-                  class="w-10 h-10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"
-                  ></path></svg
-              ></a>
-
-              <!-- Won't work in dev env cuz path is inside public folder (img is in root directory in prod) -->
-              <a href="resume.pdf" download="resume.pdf"
-                ><svg
-                  onclick=""
-                  class="w-10 h-10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M13 12H16L12 16L8 12H11V8H13V12ZM15 4H5V20H19V8H15V4ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H16L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918Z"
-                  ></path></svg
-              ></a>
             </div>
           </div>
         </div>

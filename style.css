@@ -1,11 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&display=swap');
-
 * {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 html {
@@ -20,12 +20,11 @@ body {
 }
 
 .inria-serif {
-  font-family: 'Inria Serif';
+  font-family: "Inria Serif";
 }
 
-
 .inter {
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 
 ::-webkit-scrollbar {
@@ -33,10 +32,9 @@ body {
 }
 
 body {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;  
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
 
 /* ASCII EFFECT */
 
@@ -56,60 +54,52 @@ body {
     color: white;
     position: fixed;
     top: 0;
-  
+
     width: 100vw;
     height: 100vh;
-  
+
     z-index: -10;
     background: black;
   }
 }
 
-
-
-
 /* GLOWS */
-.rainbow-glow, .rainbow-ambient {
-	text-shadow: -20px -6px 15px rgba(45, 15, 233, 0.25),
-		-9px 16px 14px rgba(100, 203, 191, 0.41),
-		14px -15px 31px rgba(238, 241, 101, 0.26),
-		0px -6px 10px rgba(211, 14, 14, 0.25),
-		10px 4px 9px rgba(100, 147, 0, 0.42);
+.rainbow-glow,
+.rainbow-ambient {
+  text-shadow: -20px -6px 15px rgba(45, 15, 233, 0.25),
+    -9px 16px 14px rgba(100, 203, 191, 0.41),
+    14px -15px 31px rgba(238, 241, 101, 0.26),
+    0px -6px 10px rgba(211, 14, 14, 0.25), 10px 4px 9px rgba(100, 147, 0, 0.42);
 }
 
 .rainbow-glow:hover {
-	text-shadow: -20px -6px 15px rgba(45, 15, 233, 0.5),
-		-9px 16px 14px rgba(100, 203, 191, 0.6),
-		14px -15px 31px rgba(238, 241, 101, 0.4),
-		0px -6px 10px rgba(211, 14, 14, 0.4),
-		10px 4px 9px rgba(100, 147, 0, 0.7);
+  text-shadow: -20px -6px 15px rgba(45, 15, 233, 0.5),
+    -9px 16px 14px rgba(100, 203, 191, 0.6),
+    14px -15px 31px rgba(238, 241, 101, 0.4),
+    0px -6px 10px rgba(211, 14, 14, 0.4), 10px 4px 9px rgba(100, 147, 0, 0.7);
 }
 
 .rainbow-glow-strong {
-	text-shadow: -20px -6px 15px rgba(45, 15, 233, 0.8),
-		-9px 16px 14px rgba(100, 203, 191, 0.8),
-		14px -15px 31px rgba(238, 241, 101, 0.7),
-		0px -6px 10px rgba(211, 14, 14, 0.7),
-		10px 4px 9px rgba(100, 147, 0, 0.8);
+  text-shadow: -20px -6px 15px rgba(45, 15, 233, 0.8),
+    -9px 16px 14px rgba(100, 203, 191, 0.8),
+    14px -15px 31px rgba(238, 241, 101, 0.7),
+    0px -6px 10px rgba(211, 14, 14, 0.7), 10px 4px 9px rgba(100, 147, 0, 0.8);
 }
 
-
 .glow {
-	transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 .glow:hover {
-	box-shadow: -20px -6px 15px rgba(45, 15, 233, 0.5),
-		-9px 16px 14px rgba(100, 203, 191, 0.6),
-		14px -15px 31px rgba(238, 241, 101, 0.4),
-		0px -6px 10px rgba(211, 14, 14, 0.4),
-		10px 4px 9px rgba(100, 147, 0, 0.7);
+  box-shadow: -20px -6px 15px rgba(45, 15, 233, 0.5),
+    -9px 16px 14px rgba(100, 203, 191, 0.6),
+    14px -15px 31px rgba(238, 241, 101, 0.4),
+    0px -6px 10px rgba(211, 14, 14, 0.4), 10px 4px 9px rgba(100, 147, 0, 0.7);
 }
-
 
 /* LINKS */
 a:after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   top: 66%;
@@ -130,7 +120,6 @@ a {
 a:hover:after {
   top: 0%;
 }
-
 
 /* ANIMATIONS */
 .fade-up-in {
@@ -159,12 +148,12 @@ a:hover:after {
 
 @keyframes fadeUpIn {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -183,16 +172,16 @@ a:hover:after {
   width: 100%;
 
   position: absolute;
-  left: 0;  
-  top: 0;   
-  
+  left: 0;
+  top: 0;
+
   z-index: -2;
   transition: 200ms ease-in-out;
 }
 
 .card-color-red::before {
   background: radial-gradient(
-    400px circle at 50px 70px, 
+    400px circle at 50px 70px,
     rgba(255, 0, 0, 0.5),
     transparent 40%
   );
@@ -200,16 +189,15 @@ a:hover:after {
 
 .card-color-blue::before {
   background: radial-gradient(
-    400px circle at 300px 020px, 
+    400px circle at 300px 020px,
     rgba(131, 202, 233, 0.5),
     transparent 40%
   );
 }
 
-
 .card-color-pink::before {
   background: radial-gradient(
-    400px circle at 100px 120px, 
+    400px circle at 100px 120px,
     rgba(187, 36, 195, 0.5),
     transparent 40%
   );
@@ -217,7 +205,7 @@ a:hover:after {
 
 .card-color-green::before {
   background: radial-gradient(
-    400px circle at 250px 120px, 
+    400px circle at 250px 120px,
     rgba(0, 255, 30, 0.4),
     transparent 40%
   );

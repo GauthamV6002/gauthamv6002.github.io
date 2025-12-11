@@ -1,5 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&display=swap");
 
+@font-face {
+  font-family: "Manrope Variable";
+  src: url("/Manrope-Variable.ttf") format("truetype");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi Variable";
+  src: url("/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi Variable";
+  src: url("/Satoshi-VariableItalic.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,6 +49,14 @@ body {
 
 .inter {
   font-family: "Inter";
+}
+
+.manrope {
+  font-family: "Manrope Variable", sans-serif;
+}
+
+.satoshi {
+  font-family: "Satoshi Variable", sans-serif;
 }
 
 ::-webkit-scrollbar {

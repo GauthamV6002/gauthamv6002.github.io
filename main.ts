@@ -59,9 +59,14 @@ function init(): void {
 
   // Load Animation
   const loader = new GLTFLoader();
+  // const modelPath = import.meta.env.PROD
+  //   ? "./hand_wave_02.glb"
+  //   : "./public/hand_wave_02.glb";
+
   const modelPath = import.meta.env.PROD
-    ? "./hand_wave_02.glb"
-    : "./public/hand_wave_02.glb";
+    ? "./portfolio_anim_01.glb"
+    : "./public/portfolio_anim_01.glb";
+
   loader.load(
     modelPath,
     function (gltf) {

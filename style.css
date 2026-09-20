@@ -35,7 +35,9 @@
 html {
   scroll-behavior: smooth;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 body {
@@ -44,7 +46,6 @@ body {
   padding: 0;
   caret-color: transparent;
   height: 100%;
-  overflow: hidden;
 }
 
 .inria-serif {
@@ -133,24 +134,39 @@ body {
   color: white;
   position: fixed;
   top: 0;
+  left: 0;
 
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 
   z-index: -10;
   background: black;
 }
 
-@media screen and (min-width: 1024px) {
-  #asciiEffect {
-    color: white;
-    top: 0;
+/* HERO LAYOUT */
 
-    width: 100vw;
-    height: 100vh;
+/* Fills the first screen, but grows (and lets the page scroll) if the copy needs
+   more room than a short window offers. svh ignores mobile browser chrome. */
+#hero {
+  min-height: 100svh;
+}
 
-    z-index: -10;
-    background: black;
+/* Stacked layout (phones, portrait tablets, narrow windows): the hand sits in the
+   top band and the copy is centred below it.
+   Keep in sync with isSideBySideLayout() in main.ts. */
+@media screen and (max-width: 1023px) and (orientation: portrait),
+  screen and (max-width: 639px) {
+  #hero {
+    padding-top: 40vh;
+    padding-top: 40svh;
+  }
+}
+
+/* Landscape phones and small landscape windows: side by side, with the copy
+   taking two thirds and the hand the rest. */
+@media screen and (min-width: 640px) and (max-width: 1023px) and (orientation: landscape) {
+  #hero p {
+    width: 66.667%;
   }
 }
 

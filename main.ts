@@ -84,6 +84,58 @@ function handRegion(): ScreenRegion {
 }
 
 /**
+ * The export ships one looping "wave" clip: scale the hand up, wave, hold, then
+ * scale it back down. Split it into a one-shot "appear" (scale only) and a
+ * seamless "wave" loop (rotation only) so the hand keeps its size once it has
+ * appeared. Also leaves the hand's rest pose at its settled size and starting
+ * orientation, so it is visible even when no action drives it.
+ */
+function splitWaveClip(
+  clip: THREE.AnimationClip,
+  model: THREE.Object3D
+): { appear: THREE.AnimationClip; wave: THREE.AnimationClip } | null {
+  const scale = clip.tracks.find((t) => t.name.endsWith(".scale"));
+  const rotation = clip.tracks.find((t) => t.name.endsWith(".quaternion"));
+  if (!scale || !rotation) return null;
+
+  const sameScale = (i: number, j: number): boolean =>
+    [0, 1, 2].every((k) => Math.abs(scale.values[i * 3 + k] - scale.values[j * 3 + k]) < 1e-4);
+  const frames = scale.times.length;
+  // The scale-up ends where the scale first holds still, and the hand starts
+  // shrinking again after the last frame that still matches that size.
+  let settled = 0;
+  while (settled + 1 < frames && !sameScale(settled, settled + 1)) settled++;
+  let lastHeld = settled;
+  while (lastHeld + 1 < frames && sameScale(lastHeld + 1, settled)) lastHeld++;
+
+  const appear = new THREE.AnimationClip("appear", -1, [
+    new THREE.VectorKeyframeTrack(
+      scale.name,
+      Array.from(scale.times.slice(0, settled + 1)),
+      Array.from(scale.values.slice(0, (settled + 1) * 3))
+    ),
+  ]);
+
+  // Frame 0 is the hidden pre-appear pose, so the loop runs from frame 1 to the
+  // last held frame, rebased to t=0 and closed on its first pose.
+  const first = 1;
+  const times = Array.from(rotation.times.slice(first, lastHeld + 1), (t) => t - rotation.times[first]);
+  const values = Array.from(rotation.values.slice(first * 4, (lastHeld + 1) * 4));
+  values.splice(-4, 4, ...values.slice(0, 4));
+  const wave = new THREE.AnimationClip("wave", -1, [
+    new THREE.QuaternionKeyframeTrack(rotation.name, times, values),
+  ]);
+
+  const node = model.getObjectByName(THREE.PropertyBinding.parseTrackName(scale.name).nodeName);
+  if (node) {
+    node.scale.fromArray(scale.values, settled * 3);
+    node.quaternion.fromArray(rotation.values, first * 4);
+  }
+
+  return { appear, wave };
+}
+
+/**
  * The convex hull of the hand mesh swept through every keyframe of the wave, in
  * the model's own space. Fitting these points instead of a bounding box keeps
  * the fit tight and guarantees the whole wave stays inside the region.
@@ -247,10 +299,13 @@ function init(): void {
   loader.load(
     modelPath,
     function (gltf) {
-      const appearClip = THREE.AnimationClip.findByName(gltf.animations, "appear");
-      const waveClip = THREE.AnimationClip.findByName(gltf.animations, "wave");
-
       asciiModel = gltf.scene;
+
+      const exported = THREE.AnimationClip.findByName(gltf.animations, "wave");
+      const clips = exported ? splitWaveClip(exported, asciiModel) : null;
+      const appearClip = clips?.appear ?? null;
+      const waveClip = clips?.wave ?? null;
+
       handOutline = outlineOf(asciiModel, waveClip);
       asciiModel.rotation.x = HAND_TILT_X;
       scene.add(asciiModel);

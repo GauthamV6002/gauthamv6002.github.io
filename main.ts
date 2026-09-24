@@ -15,6 +15,13 @@ let mixer: THREE.AnimationMixer;
 // space. Measured once after loading; see outlineOf().
 let handOutline: THREE.Vector3[] = [];
 
+// Mobile layout candidates, picked at build time (VITE_MOBILE_LAYOUT) while one
+// is being chosen. Each pairs with the matching "HERO LAYOUT" rules in style.css.
+type MobileLayout = "band" | "backdrop" | "corner" | "column";
+const MOBILE_LAYOUT: MobileLayout =
+  (import.meta.env.VITE_MOBILE_LAYOUT as MobileLayout | undefined) || "band";
+document.documentElement.dataset.mobileLayout = MOBILE_LAYOUT;
+
 const HAND_TILT_X = 0.2;
 const HAND_REST_ROTATION_Y = -0.2;
 let asciiModelRotation = HAND_REST_ROTATION_Y;
@@ -73,14 +80,29 @@ function handRegion(): ScreenRegion {
     return { left, right: 0.98, top: 0.1, bottom: 0.9 };
   }
 
-  // Stacked: the band between the social links and the copy, which starts at
-  // the hero's top padding.
+  // Stacked layouts. The copy starts at the hero's top padding.
   const nav = document.querySelector(".social-nav");
   const hero = document.getElementById("hero");
-  const top = (nav ? nav.getBoundingClientRect().bottom : 56) + 8;
-  const copyTop = hero ? parseFloat(getComputedStyle(hero).paddingTop) : 0.4 * h;
-  const bottom = Math.max(copyTop - 8, top + 40);
-  return { left: 0.08, right: 0.92, top: top / h, bottom: bottom / h };
+  const copy = document.querySelector("#hero p");
+  const navBottom = ((nav ? nav.getBoundingClientRect().bottom : 56) + 8) / h;
+  const copyTop = (hero ? parseFloat(getComputedStyle(hero).paddingTop) : 0.4 * h) / h;
+
+  switch (MOBILE_LAYOUT) {
+    case "backdrop":
+      // Full-height hand behind the copy, which sits at the bottom of the screen.
+      return { left: 0.06, right: 0.94, top: navBottom, bottom: 0.97 };
+    case "corner": {
+      // Copy at the top; the hand waves in from the bottom-right corner below it.
+      const copyBottom = copy ? copy.getBoundingClientRect().bottom / h : 0.6;
+      return { left: 0.3, right: 1, top: Math.min(copyBottom + 0.02, 0.78), bottom: 1 };
+    }
+    case "column":
+      // Smaller hand, left-aligned with the copy, in a short band above it.
+      return { left: 0.08, right: 0.7, top: navBottom, bottom: Math.max(copyTop - 0.01, navBottom + 0.05) };
+    default:
+      // Band: the hand centred between the social links and the copy.
+      return { left: 0.08, right: 0.92, top: navBottom, bottom: Math.max(copyTop - 0.01, navBottom + 0.05) };
+  }
 }
 
 /**

@@ -160,6 +160,25 @@ body {
     padding-top: 40vh;
     padding-top: 40svh;
   }
+
+  /* Candidate mobile layouts; see MOBILE_LAYOUT in main.ts. */
+  html[data-mobile-layout="backdrop"] #hero {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    justify-content: flex-end;
+  }
+  html[data-mobile-layout="backdrop"] #asciiEffect {
+    opacity: 0.4;
+  }
+  html[data-mobile-layout="corner"] #hero {
+    padding-top: 5rem;
+    justify-content: flex-start;
+  }
+  html[data-mobile-layout="column"] #hero {
+    padding-top: calc(4.5rem + 28vh);
+    padding-top: calc(4.5rem + 28svh);
+    justify-content: flex-start;
+  }
 }
 
 /* Landscape phones and small landscape windows: side by side, with the copy

@@ -117,10 +117,16 @@ function splitWaveClip(
   ]);
 
   // Frame 0 is the hidden pre-appear pose, so the loop runs from frame 1 to the
-  // last held frame, rebased to t=0 and closed on its first pose.
+  // last frame the hand is still moving (the export holds still for a moment
+  // before shrinking, which would read as a pause between waves), rebased to
+  // t=0 and closed on its first pose.
   const first = 1;
-  const times = Array.from(rotation.times.slice(first, lastHeld + 1), (t) => t - rotation.times[first]);
-  const values = Array.from(rotation.values.slice(first * 4, (lastHeld + 1) * 4));
+  const sameRotation = (i: number, j: number): boolean =>
+    [0, 1, 2, 3].every((k) => Math.abs(rotation.values[i * 4 + k] - rotation.values[j * 4 + k]) < 1e-4);
+  let last = lastHeld;
+  while (last > first + 1 && sameRotation(last, last - 1)) last--;
+  const times = Array.from(rotation.times.slice(first, last + 1), (t) => t - rotation.times[first]);
+  const values = Array.from(rotation.values.slice(first * 4, (last + 1) * 4));
   values.splice(-4, 4, ...values.slice(0, 4));
   const wave = new THREE.AnimationClip("wave", -1, [
     new THREE.QuaternionKeyframeTrack(rotation.name, times, values),

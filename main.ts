@@ -29,8 +29,14 @@ const mapRange = (
 ): number =>
   ((value - fromMin) * (toMax - toMin)) / (fromMax - fromMin) + toMin;
 
+// Touch screens have no cursor to follow (a tap would only jerk the hand round),
+// so there the hand stays at rest.
+const canHover = window.matchMedia("(hover: hover)");
+
 setTimeout(() => {
   document.addEventListener("mousemove", (e: MouseEvent) => {
+    if (!canHover.matches) return;
+
     const windowWidthHalf = window.innerWidth / 2;
     const x = e.clientX - windowWidthHalf;
 
@@ -66,21 +72,24 @@ function handRegion(): ScreenRegion {
   const h = window.innerHeight;
 
   if (isSideBySideLayout()) {
-    // Start just past the paragraph's column so the hand never sits behind text.
+    // Start just past the paragraph's column so the hand never sits behind text,
+    // and below the social links, which short landscape screens would otherwise
+    // put over the fingertips.
     const copy = document.querySelector("#hero p");
     const copyRight = copy ? copy.getBoundingClientRect().right / w : 0.55;
     const left = THREE.MathUtils.clamp(copyRight + 0.015, 0.5, 0.72);
-    return { left, right: 0.98, top: 0.1, bottom: 0.9 };
+    const nav = document.querySelector(".social-nav");
+    const navBottom = nav ? (nav.getBoundingClientRect().bottom + 8) / h : 0;
+    return { left, right: 0.98, top: Math.max(0.1, navBottom), bottom: 0.9 };
   }
 
-  // Stacked: the band between the social links and the copy, which starts at
-  // the hero's top padding.
-  const nav = document.querySelector(".social-nav");
+  // Stacked: the band above the copy, which starts at the hero's top padding,
+  // with equal room above and below the hand.
   const hero = document.getElementById("hero");
-  const top = (nav ? nav.getBoundingClientRect().bottom : 56) + 8;
   const copyTop = hero ? parseFloat(getComputedStyle(hero).paddingTop) : 0.4 * h;
-  const bottom = Math.max(copyTop - 8, top + 40);
-  return { left: 0.08, right: 0.92, top: top / h, bottom: bottom / h };
+  const margin = THREE.MathUtils.clamp(0.04 * h, 16, 40);
+  const bottom = Math.max(copyTop - margin, margin + 40);
+  return { left: 0.08, right: 0.92, top: margin / h, bottom: bottom / h };
 }
 
 /**
@@ -238,13 +247,16 @@ function fitHandToScreen(): void {
   const region = handRegion();
 
   // Size for the whole range the mouse can turn the hand through (see the mouse
-  // tracker above) so it never swings out of its region.
-  const rotations = [
-    HAND_REST_ROTATION_Y,
-    -Math.PI / 4 - Math.PI / 3,
-    -Math.PI / 4,
-    -Math.PI / 4 + Math.PI / 3,
-  ];
+  // tracker above) so it never swings out of its region. Without a mouse it only
+  // ever sits at rest, so fit and centre that pose alone.
+  const rotations = canHover.matches
+    ? [
+        HAND_REST_ROTATION_Y,
+        -Math.PI / 4 - Math.PI / 3,
+        -Math.PI / 4,
+        -Math.PI / 4 + Math.PI / 3,
+      ]
+    : [HAND_REST_ROTATION_Y];
   const size = new THREE.Vector2();
   const center = new THREE.Vector2();
 
